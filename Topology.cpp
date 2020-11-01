@@ -10,6 +10,7 @@
 #include <map>
 #include <unistd.h>
 #include "Topology.hpp"
+#include <algorithm>
 
 using namespace std;
 
