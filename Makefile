@@ -22,5 +22,6 @@ clean:
 	rm -rf $(OBJ) $(EXEC) $(TopoGenOBJ) $(TopoOBJ)
 cleanplot:
 	rm -rf *pdf
+	rm -rf plots/*
 exec:
-	./gen
+	sh $(EXEC)

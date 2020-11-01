@@ -21,7 +21,14 @@ int count = 0;
   node_count[2] = 4;
   node_count[3] = 0;
 
+  string path;
+
   cout << "please input the diagram you want to draw" << endl;
+
+  cout << "please input the directory name you want to store the generated plots."<<endl;
+
+  cin >> path;
+
   cout <<"please input the number of points with degree 1 / aka External points:";
 
   cin >> node_count[0];
@@ -34,7 +41,7 @@ int count = 0;
 
   cin >> node_count[2];
 
-   cout << endl <<"please input the number of points with degree 4:";
+  cout << endl <<"please input the number of points with degree 4:";
 
   cin >> node_count[3];
 
@@ -47,6 +54,16 @@ int count = 0;
 			      NoSelfEnergies);
 #endif
 
+      ostringstream command;
+      command << "mkdir plots/" << path;
+      
+
+      string command_string = command.str();
+
+      cout<<"check command: "<<command_string<<endl;
+
+      system(command_string.c_str());
+
   while (generator.next_topology())
     {
       ++count;
@@ -56,13 +73,10 @@ int count = 0;
       //t.print_edge_list();
       cout << endl;
 
-      ostringstream command;
-      command << "mkdir " << path;
-
-      system(command);
+      
 
       ostringstream name;
-      name << path << "/" << count << ".pdf";
+      name << "plots" << "/" << path << "/" << count << ".pdf";
       t.postscript_print(name.str());
     }
   cout << count << " generated topologies" << endl;
