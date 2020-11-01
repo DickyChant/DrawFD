@@ -12,3 +12,5 @@ make exec
 ```
 
 2. After striking 'make exec' command, the generated executable will run. And one should follow the command line output to input the neccessary infomation for diagram generation.
+
+3. The generated plots will be stored to the plots subdirectory.
