@@ -29,19 +29,19 @@ int count = 0;
 
   cin >> path;
 
-  cout <<"please input the number of points with degree 1 / aka External points:";
+  cout <<"please input the number of points with degree 1 / aka External points: ";
 
   cin >> node_count[0];
 
-  cout << endl <<"please input the number of points with degree 2:";
+  cout << endl <<"please input the number of points with degree 2: ";
 
   cin >> node_count[1];
 
-  cout << endl <<"please input the number of points with degree 3:";
+  cout << endl <<"please input the number of points with degree 3 / aka the order of phi3's g: ";
 
   cin >> node_count[2];
 
-  cout << endl <<"please input the number of points with degree 4:";
+  cout << endl <<"please input the number of points with degree 4 / aka the order of phi4's g: ";
 
   cin >> node_count[3];
 
